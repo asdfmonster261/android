@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <include name="default.xml" />
+
+  <!-- Pixel 11 Pro Fold (yogi) -->
+  <project path="device/google/yogi" name="asdfmonster261/android_device_google_yogi" revision="lineage-24.0" />
+  <project path="vendor/google/yogi" name="asdfmonster261/android_vendor_google_yogi" revision="lineage-24.0" />
+
+</manifest>
