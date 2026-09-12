@@ -17,4 +17,12 @@
   <remove-project name="platform/external/skia" />
   <project path="external/skia" name="asdfmonster261/android_external_skia" revision="lineage-24.0" />
 
+  <!-- The ISO9660/UDF volume manager work picked into 24.0 uses std::replace and
+       std::vector without including them, which the A17 toolchain libc++ headers no
+       longer provide transitively, so neither repo compiles. -->
+  <remove-project name="LineageOS/android_bootable_recovery" />
+  <project path="bootable/recovery" name="asdfmonster261/android_bootable_recovery" groups="pdk" revision="lineage-24.0" />
+  <remove-project name="LineageOS/android_system_vold" />
+  <project path="system/vold" name="asdfmonster261/android_system_vold" groups="pdk" revision="lineage-24.0" />
+
 </manifest>
