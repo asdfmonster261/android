@@ -7,4 +7,14 @@
   <project path="device/google/yogi" name="asdfmonster261/android_device_google_yogi" revision="lineage-24.0" />
   <project path="vendor/google/yogi" name="asdfmonster261/android_vendor_google_yogi" revision="lineage-24.0" />
 
+  <!-- libjxl and libdng_sdk are vendor_available on this branch, but the static libraries
+       they pull in are not, on the android-17.0.0_r1 tag these projects are pinned to, so
+       their vendor variants fail to resolve and no product completes soong analysis. -->
+  <remove-project name="platform/external/google-highway" />
+  <project path="external/google-highway" name="asdfmonster261/android_external_google-highway" revision="lineage-24.0" />
+  <remove-project name="platform/external/XMP-Toolkit-SDK" />
+  <project path="external/XMP-Toolkit-SDK" name="asdfmonster261/android_external_XMP-Toolkit-SDK" revision="lineage-24.0" />
+  <remove-project name="platform/external/skia" />
+  <project path="external/skia" name="asdfmonster261/android_external_skia" revision="lineage-24.0" />
+
 </manifest>
