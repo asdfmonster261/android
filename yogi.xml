@@ -25,4 +25,10 @@
   <remove-project name="LineageOS/android_system_vold" />
   <project path="system/vold" name="asdfmonster261/android_system_vold" groups="pdk" revision="lineage-24.0" />
 
+  <!-- avbtool cannot verify an ML-DSA signature: it hexes a bytes object, and its key
+       size check compares a key the decoder has already stripped the length header from
+       against a constant that includes it. Both are upstream, android17-release included. -->
+  <remove-project name="LineageOS/android_external_avb" />
+  <project path="external/avb" name="asdfmonster261/android_external_avb" groups="pdk" revision="lineage-24.0" />
+
 </manifest>
