@@ -32,6 +32,15 @@
   <remove-project name="LineageOS/android_external_avb" />
   <project path="external/avb" name="asdfmonster261/android_external_avb" groups="pdk" revision="lineage-24.0" />
 
+  <!-- The LineageOS notification lights patch dereferences mLineageNotificationLights
+       from updateLightsLocked(), which the LedUpdater callback re-enters from the
+       LineageNotificationLights constructor, before that field has been assigned.
+       system_server dies in NotificationManagerService.onStart() and init reboots once
+       zygote has failed four times. Only fires with favorites_incoming_call_lights on,
+       which is why upstream has not hit it. -->
+  <remove-project name="LineageOS/android_frameworks_base" />
+  <project path="frameworks/base" name="asdfmonster261/android_frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" revision="lineage-24.0" />
+
   <!-- OpenEUICC, an lpa that needs no gms. Ours lowers the EuiccService intent-filter
        priority so a stock lpa wins where one is installed and enabled, and commits the
        zxing aar upstream leaves to a gradle step. lpac and cJSON are its submodules,
