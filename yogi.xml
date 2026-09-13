@@ -32,4 +32,12 @@
   <remove-project name="LineageOS/android_external_avb" />
   <project path="external/avb" name="asdfmonster261/android_external_avb" groups="pdk" revision="lineage-24.0" />
 
+  <!-- OpenEUICC, an lpa that needs no gms. Ours lowers the EuiccService intent-filter
+       priority so a stock lpa wins where one is installed and enabled, and commits the
+       zxing aar upstream leaves to a gradle step. lpac and cJSON are its submodules,
+       pinned to the commits the fork records, since repo does not follow submodules. -->
+  <project path="packages/apps/OpenEUICC" name="asdfmonster261/openeuicc" revision="lineage-24.0" />
+  <project path="packages/apps/OpenEUICC/libs/lpac-jni/src/main/jni/lpac" name="estkme-group/lpac" revision="d214738fa0bdb23faf5833d3d798963079a00468" />
+  <project path="packages/apps/OpenEUICC/libs/lpac-jni/src/main/jni/cjson/cjson" name="DaveGamble/cJSON" revision="c859b25da02955fef659d658b8f324b5cde87be3" />
+
 </manifest>
