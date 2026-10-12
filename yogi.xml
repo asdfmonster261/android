@@ -49,4 +49,10 @@
   <project path="packages/apps/OpenEUICC/libs/lpac-jni/src/main/jni/lpac" name="estkme-group/lpac" revision="d214738fa0bdb23faf5833d3d798963079a00468" />
   <project path="packages/apps/OpenEUICC/libs/lpac-jni/src/main/jni/cjson/cjson" name="DaveGamble/cJSON" revision="c859b25da02955fef659d658b8f324b5cde87be3" />
 
+  <!-- EuiccSupportPixel's OTA jobs keep starting a process whose OtaApplication dies
+       registering its gservices observer, so without gms it drips crash reports
+       indefinitely. Ours adds it to the packages the disabler parks until gms returns. -->
+  <remove-project name="LineageOS/android_packages_apps_EuiccPolicy" />
+  <project path="packages/apps/EuiccPolicy" name="asdfmonster261/android_packages_apps_EuiccPolicy" revision="lineage-24.0" />
+
 </manifest>
