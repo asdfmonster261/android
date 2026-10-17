@@ -46,8 +46,8 @@
        zxing aar upstream leaves to a gradle step. lpac and cJSON are its submodules,
        pinned to the commits the fork records, since repo does not follow submodules. -->
   <project path="packages/apps/OpenEUICC" name="asdfmonster261/openeuicc" revision="lineage-24.0" />
-  <project path="packages/apps/OpenEUICC/libs/lpac-jni/src/main/jni/lpac" name="estkme-group/lpac" revision="d214738fa0bdb23faf5833d3d798963079a00468" />
-  <project path="packages/apps/OpenEUICC/libs/lpac-jni/src/main/jni/cjson/cjson" name="DaveGamble/cJSON" revision="c859b25da02955fef659d658b8f324b5cde87be3" />
+  <project path="packages/apps/OpenEUICC/libs/lpac-jni/src/main/jni/lpac" name="estkme-group/lpac" revision="50cdf15ab40942b00f8819a1c2ca19997f1a6d34" />
+  <project path="packages/apps/OpenEUICC/libs/lpac-jni/src/main/jni/cjson/cjson" name="DaveGamble/cJSON" revision="6d9f2443ab071f86e5d9b43025a40929ec41c46c" />
 
   <!-- EuiccSupportPixel's OTA jobs keep starting a process whose OtaApplication dies
        registering its gservices observer, so without gms it drips crash reports
