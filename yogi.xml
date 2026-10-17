@@ -8,6 +8,16 @@
   <project path="vendor/google/yogi" name="asdfmonster261/android_vendor_google_yogi" revision="lineage-24.0" />
   <project path="device/google/yogi-kernels" name="asdfmonster261/android_device_google_yogi-kernels" revision="lineage-24.0" />
 
+  <!-- The rest of the Pixel 11 family: the malibu tree carries everything the four
+       phones share, and each device adds its own thin tree, blobs and kernels. -->
+  <project path="device/google/malibu" name="asdfmonster261/android_device_google_malibu" revision="lineage-24.0" />
+  <project path="device/google/kodiak" name="asdfmonster261/android_device_google_kodiak" revision="lineage-24.0" />
+  <project path="vendor/google/kodiak" name="asdfmonster261/android_vendor_google_kodiak" revision="lineage-24.0" />
+  <project path="device/google/kodiak-kernels" name="asdfmonster261/android_device_google_kodiak-kernels" revision="lineage-24.0" />
+  <project path="device/google/grizzly" name="asdfmonster261/android_device_google_grizzly" revision="lineage-24.0" />
+  <project path="vendor/google/grizzly" name="asdfmonster261/android_vendor_google_grizzly" revision="lineage-24.0" />
+  <project path="device/google/grizzly-kernels" name="asdfmonster261/android_device_google_grizzly-kernels" revision="lineage-24.0" />
+
   <!-- The ISO9660/UDF volume manager work picked into 24.0 uses std::replace and
        std::vector without including them, which the A17 toolchain libc++ headers no
        longer provide transitively, so neither repo compiles. -->
